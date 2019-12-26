@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Miniblog.Core.Services;
 using WebEssentials.AspNetCore.OutputCaching;
+using WebEssentials.AspNetCore.Pwa;
 using WebMarkupMin.AspNetCore2;
 using WebMarkupMin.Core;
 using WilderMinds.MetaWeblog;
@@ -59,7 +60,10 @@ namespace Miniblog.Core
             // Progressive Web Apps https://github.com/madskristensen/WebEssentials.AspNetCore.ServiceWorker
             services.AddProgressiveWebApp(new WebEssentials.AspNetCore.Pwa.PwaOptions
             {
-                OfflineRoute = "/shared/offline/"
+                CacheId = "V1.2",
+                RoutesToPreCache = "/, *.css, *.js",                
+                OfflineRoute = "/shared/offline/",
+                Strategy = ServiceWorkerStrategy.CacheFirst
             });
 
             // Output caching (https://github.com/madskristensen/WebEssentials.AspNetCore.OutputCaching)
