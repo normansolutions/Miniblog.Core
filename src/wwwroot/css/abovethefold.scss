@@ -62,15 +62,46 @@ b, strong {
     font-weight: 600;
 }
 
+hr.style-ns {
+    margin-top:1.3em;
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px .4px black;
+}
+
+hr.style-ns:after { /* Not really supposed to work, but does */
+    content: "\00a0"; /* Prevent margin collapse */
+}
+
+
 a {
     color: $link_color;
+    border-bottom: 0.08em solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.08em;
+    text-decoration: none;
 
     &:hover,
     &:focus {
+        border-bottom: 0.08em solid $link_color;
         text-decoration: none;
     }
 }
 
+h1 > a, [itemprop="name"] > a{
+    text-decoration: none;
+    border: none;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        border: none;
+    }
+}
+
+.ns-readmore {
+    margin-bottom:2.2em;
+    padding-left:.4em;
+    font-style:italic;
+    }
 img, iframe {
     max-width: 100%;
 }
@@ -128,6 +159,7 @@ time {
         ul {
             list-style: none;
             text-indent: -1em;
+			padding-top: 1.2em;				   
 
             li:before {
                 content: "\0BB \020";
@@ -138,8 +170,11 @@ time {
     }
 
     > footer {
-        border-top: 1px solid $comments_border-color;
+       border-top: 1px solid $comments_border-color;													 
+        border-bottom: 1px solid $comments_input_border-color;
         padding-top: .5em;
+        padding-bottom: .5em;
+        margin-top: 1.6em;						  
         clear: both; // In case there are any floating elements in the post content
     }
 

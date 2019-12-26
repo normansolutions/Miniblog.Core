@@ -104,5 +104,12 @@ namespace Miniblog.Core.Models
             }
             return result;
         }
+		
+	    public string RenderInitialContent()
+        {
+            var resultSummary = Content;   
+            string mylines = resultSummary.Split(new string[] {"</p>"}, StringSplitOptions.None)[0];
+            return mylines.ToString();
+        }
     }
 }

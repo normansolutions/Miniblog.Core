@@ -1,7 +1,7 @@
 {
-  "name": "Miniblog.Core",
-  "short_name": "Miniblog.Core",
-  "description": "A short description of the blog.",
+  "name": "NS News & Views",
+  "short_name": "NS News & Views",
+  "description": "Head of Information Services, Web Technologist &amp; Musician, based on the Wiltshire, Dorset & Somerset border in the UK.  Offering honest independent advice on all things web, security and general IT; with a splash of added music for the soul.",
   "icons": [
     {
       "src": "/img/icon192x192.png",
