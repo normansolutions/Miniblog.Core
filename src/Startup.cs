@@ -62,10 +62,10 @@ namespace Miniblog.Core
             {
                 RegisterServiceWorker = true,
                 AllowHttp = true,
-                CacheId = "V1.6",
+                CacheId = "V1.9",
                 RoutesToPreCache = "/",                
-                OfflineRoute = "/shared/offline/",
-                Strategy = ServiceWorkerStrategy.CacheFirst
+                OfflineRoute = "/shared/offline",
+                Strategy = ServiceWorkerStrategy.CacheFirstSafe
             });
 
             // Output caching (https://github.com/madskristensen/WebEssentials.AspNetCore.OutputCaching)
