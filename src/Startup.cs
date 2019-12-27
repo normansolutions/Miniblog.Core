@@ -60,8 +60,10 @@ namespace Miniblog.Core
             // Progressive Web Apps https://github.com/madskristensen/WebEssentials.AspNetCore.ServiceWorker
             services.AddProgressiveWebApp(new WebEssentials.AspNetCore.Pwa.PwaOptions
             {
-                CacheId = "V1.2",
-                RoutesToPreCache = "/, *.css, *.js",                
+                RegisterServiceWorker = true,
+                AllowHttp = true,
+                CacheId = "V1.6",
+                RoutesToPreCache = "/",                
                 OfflineRoute = "/shared/offline/",
                 Strategy = ServiceWorkerStrategy.CacheFirst
             });
