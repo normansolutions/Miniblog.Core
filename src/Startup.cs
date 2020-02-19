@@ -62,7 +62,7 @@ namespace Miniblog.Core
             {
                 RegisterServiceWorker = true,
                 AllowHttp = true,
-                CacheId = "NS18022020v2",
+                CacheId = "NS19022020v1",
                 RoutesToPreCache = "/",                
                 OfflineRoute = "/shared/offline",
                 Strategy = ServiceWorkerStrategy.CacheFirstSafe

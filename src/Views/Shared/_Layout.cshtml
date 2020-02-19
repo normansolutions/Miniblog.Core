@@ -128,7 +128,8 @@
         window.addEventListener('load', () => {
             quicklink({
                 origins: true,
-                priority: true
+                priority: true,
+                ignores: [/\/logout\/?/]
             });
         });
     </script>
